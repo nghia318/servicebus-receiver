@@ -13,19 +13,33 @@ ServiceBusClient serviceBusClient = new ServiceBusClient(connectionString);
 // service bus receiver
 ServiceBusReceiver serviceBusReceiver = serviceBusClient.CreateReceiver(queueName);
 
-//// receive & read message
-//var message = await serviceBusReceiver.ReceiveMessageAsync();
+// receive message
+//ServiceBusReceivedMessage message = await serviceBusReceiver.ReceiveMessageAsync();
+
+// receive deferred message by sequenceNumber
+//int sequenceNumber = 11;
+//ServiceBusReceivedMessage message = await serviceBusReceiver.ReceiveDeferredMessageAsync(sequenceNumber);
+
+//convert message into Employee object using Deserialization
 //string messageInJson = message.Body.ToString();
-
-//// convert message into Employee object using Deserialization
 //Employee employeeDetail = JsonSerializer.Deserialize<Employee>(messageInJson);
-
 //Console.WriteLine(employeeDetail.FirstName);
 
-// delete message with sequence number
-//int sequenceNumber = "";
-//ServiceBusReceivedMessage deferredMessage = await serviceBusReceiver.ReceiveDeferredMessageAsync(sequenceNumber);
-//await serviceBusReceiver.CompleteMessageAsync(deferredMessage);
+// complete message 
+//await serviceBusReceiver.CompleteMessageAsync(message);
+
+//abandon message 
+//await serviceBusReceiver.AbandonMessageAsync(message);
+
+//deferred message
+//await serviceBusReceiver.DeferMessageAsync(message);
+
+//move to dead-letter
+//await serviceBusReceiver.DeadLetterMessageAsync(message);
+//read dead-letter message
+//var receiverForDeadLetterQueue = serviceBusClient.CreateReceiver(queueName, new ServiceBusReceiverOptions() { SubQueue = SubQueue.DeadLetter });
+//var msgObtainedFromDeadLetterQueue = await receiverForDeadLetterQueue.ReceiveMessageAsync();
+//Console.WriteLine(msgObtainedFromDeadLetterQueue);
 
 Console.WriteLine("msg received!");
 

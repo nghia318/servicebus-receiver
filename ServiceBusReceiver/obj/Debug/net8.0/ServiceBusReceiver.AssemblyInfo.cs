@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceBusReceiver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11226f94758dd17c455e0a1ccb5f2b3b8c9761db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7155ff8daf20f6cae6a3c29d308b4d064f7e5313")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceBusReceiver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceBusReceiver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
