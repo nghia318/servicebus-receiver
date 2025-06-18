@@ -1,51 +1,74 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Azure.Messaging.ServiceBus;
-using Microsoft.Azure.Amqp;
-using Microsoft.Azure.Amqp.Framing;
-using System.Reflection;
-using System.Text.Json;
+﻿using Azure.Messaging.ServiceBus;
+using ServiceBusReceiverModule;
+class Program
+{
+    private const string ConnectionString = "Endpoint=sb://mentossrvbus.servicebus.windows.net/;SharedAccessKeyName=queuepolicy;SharedAccessKey=YGl/cJ+F7sejJKEHfCZ0SHEZOBGd4Xxvs+ASbNPBePg=;EntityPath=firstqueue";
+    private const string QueueName = "firstqueue";
+    public static async Task Main(string[] args)
+    {
+        // mode: receive and delete
+        Console.WriteLine("Using Receive and Delete mode."); await using var receiverModule = new ReceiverModule(ConnectionString, QueueName, ServiceBusReceiveMode.ReceiveAndDelete);
 
-string connectionString = "Endpoint=sb://mentossrvbus.servicebus.windows.net/;SharedAccessKeyName=queuepolicy;SharedAccessKey=YGl/cJ+F7sejJKEHfCZ0SHEZOBGd4Xxvs+ASbNPBePg=;EntityPath=firstqueue";
-string queueName = "firstqueue";
-// service bus client
-ServiceBusClient serviceBusClient = new ServiceBusClient(connectionString);
+        // mode: peeklock
+        //Console.WriteLine("Using PeekLock mode."); await using var receiverModule = new ReceiverModule(ConnectionString, QueueName, ServiceBusReceiveMode.PeekLock);
 
-// service bus receiver
-ServiceBusReceiver serviceBusReceiver = serviceBusClient.CreateReceiver(queueName);
+        int? sequenceNumber = null;
 
-// receive message
-//ServiceBusReceivedMessage message = await serviceBusReceiver.ReceiveMessageAsync();
+        //receive deadletter msg
+        //var deadLetterMsg = await receiverModule.ReceiveDeadLetterMessageAsync();
+        //if (deadLetterMsg != null)
+        //{
+        //    string messageBody = deadLetterMsg.Body.ToString();
+        //    Console.WriteLine($"\nBody: '{messageBody}'");
+        //}
+        try
+        {
+            await receiverModule.InitializeAsync();
+            if (sequenceNumber == null)
+            {
+                ServiceBusReceivedMessage? receivedMessage = await receiverModule.ReceiveMessageAsync();
+                if (receivedMessage != null)
+                {
+                    string messageBody = receivedMessage.Body.ToString();
+                    string seqNum = receivedMessage.SequenceNumber.ToString();
+                    Console.WriteLine("\n============MESSAGE=============");
+                    Console.WriteLine($"\nSequenceNumber: {seqNum} - Body: '{messageBody}'\n");
+                    //await receiverModule.CompleteMessage(receivedMessage);
+                    //await receiverModule.AbandonMessageAsync(receivedMessage);
+                    //await receiverModule.DeferMessageAsync(receivedMessage);
+                    //await receiverModule.DeadLetterMessageAsync(receivedMessage);
+                }
+                else
+                {
+                    Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] No regular messages (waiting...)");
+                }
 
-// receive deferred message by sequenceNumber
-//int sequenceNumber = 11;
-//ServiceBusReceivedMessage message = await serviceBusReceiver.ReceiveDeferredMessageAsync(sequenceNumber);
+            }
+
+            if (sequenceNumber != null)
+            {
+                ServiceBusReceivedMessage? receivedMessage = await receiverModule.ReceiveDeferredMessageAsync((int)sequenceNumber);
+                if (receivedMessage != null)
+                {
+                    string messageBody = receivedMessage.Body.ToString();
+                    Console.WriteLine($"\nDeferred message Body: '{messageBody}'");
+                }
+                //await receiverModule.CompleteMessage(receivedMessage);
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"{ex.Message}");
+        }
+    }
+}
 
 //convert message into Employee object using Deserialization
 //string messageInJson = message.Body.ToString();
 //Employee employeeDetail = JsonSerializer.Deserialize<Employee>(messageInJson);
 //Console.WriteLine(employeeDetail.FirstName);
 
-// complete message 
-//await serviceBusReceiver.CompleteMessageAsync(message);
 
-//abandon message 
-//await serviceBusReceiver.AbandonMessageAsync(message);
 
-//deferred message
-//await serviceBusReceiver.DeferMessageAsync(message);
 
-//move to dead-letter
-//await serviceBusReceiver.DeadLetterMessageAsync(message);
-//read dead-letter message
-//var receiverForDeadLetterQueue = serviceBusClient.CreateReceiver(queueName, new ServiceBusReceiverOptions() { SubQueue = SubQueue.DeadLetter });
-//var msgObtainedFromDeadLetterQueue = await receiverForDeadLetterQueue.ReceiveMessageAsync();
-//Console.WriteLine(msgObtainedFromDeadLetterQueue);
 
-Console.WriteLine("msg received!");
-
-class Employee
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public int Salary { get; set; }
-}
