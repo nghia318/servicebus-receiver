@@ -33,7 +33,7 @@ class Program
                     string seqNum = receivedMessage.SequenceNumber.ToString();
                     Console.WriteLine("\n============MESSAGE=============");
                     Console.WriteLine($"\nSequenceNumber: {seqNum} - Body: '{messageBody}'\n");
-                    //await receiverModule.CompleteMessage(receivedMessage);
+                    await receiverModule.CompleteMessage(receivedMessage);
                     //await receiverModule.AbandonMessageAsync(receivedMessage);
                     //await receiverModule.DeferMessageAsync(receivedMessage);
                     //await receiverModule.DeadLetterMessageAsync(receivedMessage);

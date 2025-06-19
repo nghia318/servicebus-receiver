@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\Receiver.csproj|c:\\users\\lee\\desktop\\servicebus-quickstart\\servicebusreceiver\\servicebusreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\Receiver.csproj|solutionrelative:servicebusreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|c:\\users\\lee\\desktop\\servicebus-quickstart\\servicebusreceiver\\servicebusreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|solutionrelative:servicebusreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\Receiver.csproj|c:\\users\\lee\\desktop\\servicebus-quickstart\\servicebusreceiver\\servicebusreceiver\\receivermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\Receiver.csproj|solutionrelative:servicebusreceiver\\receivermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|c:\\users\\lee\\desktop\\servicebus-quickstart\\servicebusreceiver\\servicebusreceiver\\receivermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|solutionrelative:servicebusreceiver\\receivermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +30,7 @@
               "RelativeToolTip": "ServiceBusReceiver\\ReceiverModule.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAcwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T04:50:18.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T04:50:18.281Z"
             },
             {
               "$type": "Document",
@@ -41,7 +40,7 @@
               "RelativeDocumentMoniker": "ServiceBusReceiver\\Program.cs",
               "ToolTip": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\Program.cs",
               "RelativeToolTip": "ServiceBusReceiver\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwCMAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-17T06:26:03.076Z",
               "EditorCaption": ""
