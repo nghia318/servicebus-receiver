@@ -453,9 +453,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\ServiceBusReceiverModule.csproj",
-      "projectName": "ServiceBusReceiverModule",
-      "projectPath": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\ServiceBusReceiverModule.csproj",
+      "projectUniqueName": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\ServiceBusQueueReceiver.csproj",
+      "projectName": "ServiceBusQueueReceiver",
+      "projectPath": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\ServiceBusQueueReceiver.csproj",
       "packagesPath": "C:\\Users\\lee\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\obj\\",
       "projectStyle": "PackageReference",

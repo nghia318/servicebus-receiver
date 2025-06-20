@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|c:\\users\\lee\\desktop\\servicebus-quickstart\\servicebusreceiver\\servicebusreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|solutionrelative:servicebusreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|c:\\users\\lee\\desktop\\servicebus-quickstart\\servicebusreceiver\\servicebusreceiver\\receivermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77FBC42F-3009-4458-AEF8-C0C8F11BB2D9}|ServiceBusReceiver\\ServiceBusReceiverModule.csproj|solutionrelative:servicebusreceiver\\receivermodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48972440-625D-4C82-AA1B-CBA79E04ACC5}|ServiceBusTopicSubscriptionReceiver\\ServiceBusTopicSubscriptionReceiver.csproj|c:\\users\\lee\\desktop\\servicebus-quickstart\\servicebusreceiver\\servicebustopicsubscriptionreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48972440-625D-4C82-AA1B-CBA79E04ACC5}|ServiceBusTopicSubscriptionReceiver\\ServiceBusTopicSubscriptionReceiver.csproj|solutionrelative:servicebustopicsubscriptionreceiver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,31 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReceiverModule.cs",
-              "DocumentMoniker": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\ReceiverModule.cs",
-              "RelativeDocumentMoniker": "ServiceBusReceiver\\ReceiverModule.cs",
-              "ToolTip": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\ReceiverModule.cs",
-              "RelativeToolTip": "ServiceBusReceiver\\ReceiverModule.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAcwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T04:50:18.281Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\Program.cs",
-              "RelativeDocumentMoniker": "ServiceBusReceiver\\Program.cs",
-              "ToolTip": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusReceiver\\Program.cs",
-              "RelativeToolTip": "ServiceBusReceiver\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAABKAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusTopicSubscriptionReceiver\\Program.cs",
+              "RelativeDocumentMoniker": "ServiceBusTopicSubscriptionReceiver\\Program.cs",
+              "ToolTip": "C:\\Users\\lee\\Desktop\\servicebus-quickstart\\ServiceBusReceiver\\ServiceBusTopicSubscriptionReceiver\\Program.cs",
+              "RelativeToolTip": "ServiceBusTopicSubscriptionReceiver\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T06:26:03.076Z",
+              "WhenOpened": "2025-06-20T05:00:35.553Z",
               "EditorCaption": ""
             }
           ]

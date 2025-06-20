@@ -1,5 +1,5 @@
 ﻿using Azure.Messaging.ServiceBus;
-using ServiceBusReceiverModule;
+using ServiceBusQueueReceiver;
 class Program
 {
     private const string ConnectionString = "Endpoint=sb://mentossrvbus.servicebus.windows.net/;SharedAccessKeyName=queuepolicy;SharedAccessKey=YGl/cJ+F7sejJKEHfCZ0SHEZOBGd4Xxvs+ASbNPBePg=;EntityPath=firstqueue";
