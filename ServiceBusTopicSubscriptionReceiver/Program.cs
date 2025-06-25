@@ -2,7 +2,7 @@
 
 public class Program
 {
-    private const string topicConnectionString = "Endpoint=sb://srvbusstandard.servicebus.windows.net/;SharedAccessKeyName=connection;SharedAccessKey=73jnWHoPwRFGvg+LDEVmo+ey1ur1ZQPRv+ASbFcDV8Y=;EntityPath=firsttopic";
+    private const string topicConnectionString = "";
     private const string topicName = "firsttopic";
     private const string subscriptionName = "subs1";
     public static async Task Main(string[] args)

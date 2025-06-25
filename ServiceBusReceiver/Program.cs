@@ -2,7 +2,7 @@
 using ServiceBusQueueReceiver;
 class Program
 {
-    private const string ConnectionString = "Endpoint=sb://mentossrvbus.servicebus.windows.net/;SharedAccessKeyName=queuepolicy;SharedAccessKey=YGl/cJ+F7sejJKEHfCZ0SHEZOBGd4Xxvs+ASbNPBePg=;EntityPath=firstqueue";
+    private const string ConnectionString = "";
     private const string QueueName = "firstqueue";
     public static async Task Main(string[] args)
     {
